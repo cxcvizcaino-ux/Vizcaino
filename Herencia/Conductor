@@ -1,0 +1,28 @@
+class Conductor {
+    public nombre: string;
+    public apellido: string;
+    public edad: number;
+    public vehiculoAsignado: string;
+
+    constructor() {
+        this.nombre = "Miguel";
+        this.apellido = "Rodríguez";
+        this.edad = 38;
+        this.vehiculoAsignado = "Camioneta";
+    }
+
+    obtenerDatos(): { nombre: string; apellido: string; edad: number; vehiculo: string } {
+        return {
+            nombre: this.nombre,
+            apellido: this.apellido,
+            edad: this.edad,
+            vehiculo: this.vehiculoAsignado
+        };
+    }
+
+    mostrar(): void {
+        console.log(Conductor: ${this.nombre} ${this.apellido}, Edad: ${this.edad}, Vehículo: ${this.vehiculoAsignado});
+    }
+}
+
+commit new file Agregar clase Conductor dentro de Herencia
