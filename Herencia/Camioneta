@@ -1,0 +1,8 @@
+Class Camioneta extends Carro{
+    motor: String;
+    modelo: String;
+    
+    llamar(): string {
+        return "Llamando";
+    }
+}

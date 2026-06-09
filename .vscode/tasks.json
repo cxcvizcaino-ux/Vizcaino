@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Install Node and TypeScript tools",
+			"type": "shell",
+			"command": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"Set-ExecutionPolicy -Scope CurrentUser RemoteSigned -Force; Invoke-WebRequest -Uri https://nodejs.org/dist/latest-v18.x/node-v18.20.4-win-x64.msi -OutFile $env:TEMP\\nodejs.msi; Start-Process msiexec.exe -ArgumentList '/i $env:TEMP\\nodejs.msi /qn' -Wait; $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User'); npm install -g ts-node typescript\"",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}

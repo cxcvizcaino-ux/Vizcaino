@@ -1,0 +1,8 @@
+Class Moto extends Carro{
+    cilindrada: number;
+    tipo: String;
+
+    llamar(): string {
+        return "Llamando";
+    }
+}
